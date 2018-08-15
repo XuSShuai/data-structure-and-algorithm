@@ -22,7 +22,7 @@ def generate_cases():
         res_2 = correct_method(arr)
 
         if not operator.eq(res_2, res_1):
-            print("fuck")
+            print("error")
             break
 
 

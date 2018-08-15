@@ -30,11 +30,11 @@ def check():
 
         for k in range(start):
             if arr[k] >= num:
-                print("fuck")
+                print("error")
                 return
         for k in range(end + 1, len(arr)):
             if arr[k] <= num:
-                print("fuck")
+                print("error")
                 return
 
 

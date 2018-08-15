@@ -61,7 +61,7 @@ def generate_cases():
         res_2 = merge_sort(arr, 0, len(arr) - 1)
 
         if res_2 != res_1:
-            print("fuck")
+            print("error")
 
 
 # print("input array: ")

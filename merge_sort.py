@@ -48,7 +48,7 @@ def generate_cases():
             print(arr)
             print(res_1)
             print(res_2)
-            print("fuck")
+            print("error")
             break
 
 
