@@ -45,7 +45,7 @@ def pre_order(head):
                 stack.put(head.right)
             if head.left:
                 stack.put(head.left)
-    print()
+        print()
 
 
 def in_order(head):
@@ -78,7 +78,7 @@ def post_order(head):
                 stack.put(head.right)
         while not auxiliary_stack.empty():
             print(auxiliary_stack.get(), end=" ")
-        print(" ")
+        print()
 
 
 if __name__ == "__main__":
