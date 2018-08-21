@@ -28,7 +28,7 @@ def is_complete_binary_tree(head):
                 que.put(left)
             if right:
                 que.put(right)
-            else:
+            else:  # if left is None or right is None
                 all_leaf = True
         return True
 
