@@ -5,6 +5,8 @@
 # 利用num对原数组做partition，小于num的左边， 大于num的右边， 等于的中间，返回
 # 等于区域的下标区域start， end， 如果start，end包括第k小的数， 返回；否则，在
 # 一边区域中继续bfprt算法
+
+# bfprt想要解决的问题是找到一个无序数组中第k个最大值
 import copy
 import numpy as np
 
