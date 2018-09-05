@@ -1,4 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # data-structure-and-algorithm
 
  - bubble_sort.py: 冒泡排序，O(N^2)，额外空间复杂度O(1)。
