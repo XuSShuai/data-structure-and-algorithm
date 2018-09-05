@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # data-structure-and-algorithm
 
  - bubble_sort.py: 冒泡排序，O(N^2)，额外空间复杂度O(1)。
@@ -8,4 +9,4 @@
  - get_max.py:求数组中最大值，熟悉递归操作。（调用子函数时候父函数运行环境被系统自动压栈）
     - `master公`式（递归函数时间复杂度分析）:
     
-    $$T(N) = aT(\fracnb)+O(n^d)$$
+    $T(N) = aT(\frac{n}{b})+O(n^d)$
