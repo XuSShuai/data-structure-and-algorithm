@@ -22,7 +22,7 @@
   5左边比5小的数， 1、 3、 4、 2\
   所以小和为1+1+3+1+1+3+4+2=16\
   利用**归并排序的思想**，1在和3进行合并的时候，res+1， 1,3作为一个整体在和4,2,5进行合并的时候，对于1来说，res+1（由于4）、res+1（由于2）、res+1（由于5）；对于3来说，res+3（由于4）、res+3（由于5）
- - [inverse_pair.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/inverse_pair.py)：逆序对问题:
+ - [inverse_pair.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/inverse_pair.py)：逆序对问题，
 在一个数组中， 左边的数如果比右边的数大， 则两个数构成一个逆序对， 请打印所有逆序对。例子：1,3,4,2,5,1\
 所有的逆序对有：\
 3, 2\
@@ -34,4 +34,4 @@
 
  *****
   
-  - 
+  -[netherland_flag.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/netherland_flag.py)：荷兰国旗问题，给定一个数组arr， 和一个数num， 请把小于num的数放在数组的左边， 等于num的数放在数组的中间， 大于num的数放在数组的右边。要求额外空间复杂度O(1)， 时间复杂度O(N)。
