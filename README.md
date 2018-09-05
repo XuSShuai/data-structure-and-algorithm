@@ -40,6 +40,6 @@
   - [quick_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/quick_sort.py)：快速排序。利用荷兰国旗问题对经典的快排算法进行改进，将数组的最后的一个数选为pivot，小于pivot的放在左边；等于的放在中间；大于的放在右边。再对左边区域和右边区域递归此过程。
   - [random_quick_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/random_quick_sort.py)，随机快排，仅仅是将pivot的选择从每次的最后一个元素设置变为随机。这样快排的时间复杂度的长期期望为$O(N\log{N})$。额外空间复杂度为$O(\log{N})$
   - [heap_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/heap_sort.py)：堆在逻辑上就是一棵完全二叉树，一个下标为$i$的节点的左右孩子节点的下标分别为$2\*i+1$和$2\*i+2$， 父节点的下标为$\frac{i-1}{2}$。
-   - 大根堆：在一棵完全二叉树中，任何一棵子树中的最大值都位于头结点上；
-   - 小根堆：在一棵完全二叉树中，任何一棵子树中的最小值都位于头结点上；
+    - 大根堆：在一棵完全二叉树中，任何一棵子树中的最大值都位于头结点上；
+    - 小根堆：在一棵完全二叉树中，任何一棵子树中的最小值都位于头结点上；
 长度为N的数组调整为大（小）根堆的时间复杂度为$O(N) = \log{1} + \log{2} + ... + \log{N-1}$。heap_insert的时间复杂度为$O(N)$，
