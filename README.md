@@ -10,4 +10,4 @@
         - 如果$\log_{b}a > d$，时间复杂度为：$O(N^{\log_ba})$
         - 如果$\log_ba = d$，时间复杂度为：$O(N^d*{\log{N}})$
         - 如果$\log_ba < d$，时间复杂度为：$O(N^d)$
- - [merge_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/merge_sort.py): 归并排序，左部分排好序，右部分排好序，使用外排和一个辅助数组将左部分和右部分排好序。根据master公式可以得到：$$T(N) = 2T(\frac{N}{2})+O(N^1)$$, $\log_ba = 1, d = 1$, 所以归并排序的时间复杂度为$O(N\log{N})$
+ - [merge_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/merge_sort.py): 归并排序，左部分排好序，右部分排好序，使用外排和一个辅助数组将左部分和右部分排好序。根据`master`公式可以得到：$$T(N) = 2T(\frac{N}{2})+O(N^1)$$ $\log_ba = 1, d = 1$, 所以归并排序的时间复杂度为$O(N\log{N})$。额外空间复杂度$O(N)$。
