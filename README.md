@@ -1,5 +1,7 @@
 # data-structure-and-algorithm
 
+### part 1
+
  - [bubble_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/bubble_sort.py): 冒泡排序，$O(N^2)$，额外空间复杂度$O(1)$。
  - [selection_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/selection_sort.py): 选择排序，$O(N^2)$，额外空间复杂度$O(1)$。
  - [insert_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/insert_sort.py): 插入排序，
@@ -32,8 +34,9 @@
 2, 1\
 5, 1
 
- *****
+### part 2
   
   - [netherland_flag.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/netherland_flag.py)：荷兰国旗问题，给定一个数组arr， 和一个数num， 请把小于num的数放在数组的左边， 等于num的数放在数组的中间， 大于num的数放在数组的右边。要求额外空间复杂度O(1)， 时间复杂度O(N)。
   - [quick_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/quick_sort.py)：快速排序。利用荷兰国旗问题对经典的快排算法进行改进，将数组的最后的一个数选为pivot，小于pivot的放在左边；等于的放在中间；大于的放在右边。再对左边区域和右边区域递归此过程。
   - [random_quick_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/random_quick_sort.py)，随机快排，仅仅是将pivot的选择从每次的最后一个元素设置变为随机。这样快排的时间复杂度的长期期望为$O(N\log{N})$。额外空间复杂度为$O(\log{N})$
+  - [heap_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/heap_sort.py),堆排序，一个节点的的子节点的下标$2*i+1$和$2*i+2$， 父节点的下标为$\frac{i-1}{2}$。
