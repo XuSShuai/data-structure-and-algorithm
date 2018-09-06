@@ -138,14 +138,16 @@ heapify的时间复杂度$O(\log{N})$。\
 
  - 复制含有随机指针节点的链表
       一种特殊的链表节点类描述如下：\
-      public class Node {\
-        public int value;\
-        public Node next;\
-        public Node rand;\
-        public Node(int data) {\
-            this.value = data;\
-        }\
-      }\
+      ```java
+      public class Node {
+        public int value;
+        public Node next;
+        public Node rand;
+        public Node(int data) {
+            this.value = data;
+        }
+      }
+      ```
 
       Node类中的value是节点值， next指针和正常单链表中next指针的意义一样，都指向下一个节点，
       rand指针是Node类中新增的指针， 这个指针可能指向链表中的任意一个节点， 也可能指向null。
