@@ -76,10 +76,10 @@ heapify的时间复杂度$O(\log{N})$。\
 ### part 4
 
  - 转圈打印矩阵：[print_matrix_spiral_order.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/print_matrix_spiral_order.py), 例如对于矩阵：\
-    `[[ 0  1  2  3  4  5]\
+    [[ 0  1  2  3  4  5]\
      [ 6  7  8  9 10 11]\
      [12 13 14 15 16 17]\
-     [18 19 20 21 22 23]]\`
+     [18 19 20 21 22 23]]\
     输出打印结果为：0 1 2 3 4 5 11 17 23 22 21 20 19 18 12 6 7 8 9 10 16 15 14 13 
     
  - 旋转打印矩阵：[rotate_matrix.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/rotate_matrix.py)
@@ -94,4 +94,12 @@ heapify的时间复杂度$O(\log{N})$。\
      [21 16 11  6  1]\
      [22 17 12  7  2]\
      [23 18 13  8  3]\
-     [24 19 14  9  4]]\
+     [24 19 14  9  4]]
+     
+ - 之字形打印矩阵：[zig_zag_print.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/zig_zag_print.py)\
+   对矩阵\
+   [[ 0  1  2  3  4]\
+    [ 5  6  7  8  9]\
+    [10 11 12 13 14]\
+    [15 16 17 18 19]]\
+   的打印结果为：0 1 5 10 6 2 3 7 11 15 16 12 8 4 9 13 17 18 14 19\
