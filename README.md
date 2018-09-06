@@ -85,6 +85,7 @@ heapify的时间复杂度$O(\log{N})$。\
  - 旋转打印矩阵：[rotate_matrix.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/rotate_matrix.py)
    对矩阵旋转90度，例如：\
    $$
+   \left[
    \begin{matrix}
     0 & 1 & 2 & 3 & 4\
     5 & 6 & 7 & 8 & 9\
@@ -92,8 +93,11 @@ heapify的时间复杂度$O(\log{N})$。\
     15 &16 &17 &18 &19\
     20 &21 &22 &23 &24\
    \end{matrix}
+   \right]
    $$
    旋转之后的输出为：\
+   $$
+   \left[
    \begin{matrix}
     20 &15 &10 & 5 & 0\
     21 &16 &11  &6 & 1\
@@ -101,12 +105,18 @@ heapify的时间复杂度$O(\log{N})$。\
     23& 18& 13&  8&  3\
     24& 19& 14&  9&  4
    \end{matrix}
+   \right]
+   $$
  - 之字形打印矩阵：[zig_zag_print.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/zig_zag_print.py)\
    对矩阵\
+   $$
+   \left[
    \begin{matrix}
-    0 & 1 & 2 & 3 & 4\
-    5 & 6 & 7 & 8 & 9\
-    10& 11& 12& 13& 14\
-    15& 16& 17& 18& 19\
+    0 & 1 & 2 & 3 & 4\\
+    5 & 6 & 7 & 8 & 9\\
+    10& 11& 12& 13& 14\\
+    15& 16& 17& 18& 19\\
    \end{matrix}
+   \right]
+   $$
    的打印结果为：0 1 5 10 6 2 3 7 11 15 16 12 8 4 9 13 17 18 14 19\
