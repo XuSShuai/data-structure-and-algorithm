@@ -1,6 +1,5 @@
 # data-structure-and-algorithm
 
-<<<<<<< HEAD
  - bubble_sort.py: 冒泡排序，$O(N^2)$，额外空间复杂度$O(1)$。
  - selection_sort.py: 选择排序，$O(N^2)$，额外空间复杂度$O(1)$。
  - insert_sort.py: 插入排序，
@@ -8,9 +7,9 @@
     若初始数组逆序，则时间复杂度为$O(N^2)$。根据时间复杂度的定义，该算法时间复杂度为$O(N^2)$。额外空间复杂度$O(1)$。
  - get_max.py:求数组中最大值，熟悉递归操作。（调用子函数时候父函数运行环境被系统自动压栈）
     - `master公`式（递归函数时间复杂度分析）:
-    $$T(N) = aT(\fracnb)+O(n^d)$$
+    $$T(N) = aT(\frac{n}{b})+O(n^d)$$
         - $\text{if }logba$
-=======
+
 ### part 1
 
  - [bubble_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/bubble_sort.py): 冒泡排序，$O(N^2)$，额外空间复杂度$O(1)$。
