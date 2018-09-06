@@ -62,6 +62,13 @@ heapify的时间复杂度$O(\log{N})$。\
  - 使用定长数组实现栈和队列
    - [stack_based_array.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/stack_based_array.py)
    - [queue_based_array.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/queue_based_array.py)
-   - 在python中可以引入queue包来使用封装好的栈和队列，queue.LifoQueue(-1)为栈；queue.Queue(-1)为队列。[queue_api.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/queue_api.py)
+
+在python中可以引入queue包来使用封装好的栈和队列，`queue.LifoQueue(-1)`为栈；`queue.Queue(-1)`为队列。[queue_api.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/queue_api.py)
+q.qsize() 返回大小\
+q.empty() 如果为空，返回True,反之False\
+q.full() 如果满了，返回True,反之False\
+q.get() \
+q.put(item) \
+
    
  - 
