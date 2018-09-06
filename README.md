@@ -125,4 +125,12 @@ heapify的时间复杂度$O(\log{N})$。\
    \end{matrix}
    \right]
    $$
-   的打印结果为：0 1 5 10 6 2 3 7 11 15 16 12 8 4 9 13 17 18 14 19\
+   的打印结果为：0 1 5 10 6 2 3 7 11 15 16 12 8 4 9 13 17 18 14 19
+   
+ - 反转单向链表：[reverse_list.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/reverse_list.py)，要求时间复杂度为$O(N)$，额外空间复杂度为$O(1)$。
+ - 反转双向链表：[reverse_double_list.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/reverse_double_list.py)，要求时间复杂度为$O(N)$，额外空间复杂度为$O(1)$。
+
+ - 判断一个链表是否为回文结构：
+    - 方法1：额外空间复杂度为$O(N)$，对链表进行遍历，并将元素一一入栈，第二次遍历时和栈中弹出的元素比较，如果存在不相等的，则不是回文。
+    - 方法2：额外空间复杂度$O(N/2)$，使用快慢指针，慢指针从找到的中点位置之后开始将元素入栈（一半的链表元素），入栈完成后，重新遍历链表和栈中依次弹出的元素对比，如果栈空之前发现有不等的元素，则不是回文结构。
+    - 方法3：额外空间复杂度$O(1)$，使用快慢指针，将慢指针之后的链表逆序，然后分别从第一个节点往后和最后一个节点往前逐个开始进行比对。
