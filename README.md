@@ -63,10 +63,12 @@ heapify的时间复杂度$O(\log{N})$。\
    - [stack_based_array.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/stack_based_array.py)
    - [queue_based_array.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/queue_based_array.py)
 
-     在python中可以引入queue包来使用封装好的栈和队列，`queue.LifoQueue(-1)`为栈；`queue.Queue(-1)`为队列。[queue_api.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/queue_api.py)
-     q.qsize() 返回大小\
-     q.empty() 如果为空，返回True,反之False\
-     q.full() 如果满了，返回True,反之False\
-     q.get() \
-     q.put(item) 
-
+     在python中可以引入queue包来使用封装好的栈和队列，`queue.LifoQueue(-1)`为栈；`queue.Queue(-1)`为队列。[queue_api.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/queue_api.py)\
+     `q.qsize()` 返回大小\
+     `q.empty()` 如果为空，返回True,反之False\
+     `q.full()` 如果满了，返回True,反之False\
+     `q.get()` \
+     `q.put(item)` 
+     
+  - 仅用队列实现栈结构：[quene2stack.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/quene2stack.py)
+  - 仅用栈实现队列结构：[stack2queue.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/stack2queue.py)
