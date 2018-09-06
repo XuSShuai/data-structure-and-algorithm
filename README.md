@@ -56,3 +56,12 @@ heapify的时间复杂度$O(\log{N})$。\
     - 快排不可以
     - 堆排序不可以
 综合排序算法：当数据量很大的时候，如果是基础数据类型，使用快排（不需要稳定性）；如果是自定义数据类型，使用归并排序（需要有稳定性）。如果数据量很小，使用插入排序。
+
+### part 3
+
+ - 使用定长数组实现栈和队列
+   - [stack_based_array.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/stack_based_array.py)
+   - [queue_based_array.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/queue_based_array.py)
+   - 在python中可以引入queue包来使用封装好的栈和队列，queue.LifoQueue(-1)为栈；queue.Queue(-1)为队列。[queue_api.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/queue_api.py)
+   
+ - 
