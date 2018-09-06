@@ -1,15 +1,5 @@
 # data-structure-and-algorithm
 
- - bubble_sort.py: 冒泡排序，$O(N^2)$，额外空间复杂度$O(1)$。
- - selection_sort.py: 选择排序，$O(N^2)$，额外空间复杂度$O(1)$。
- - insert_sort.py: 插入排序，
-    - 时间复杂度分析：冒泡排序和选择排序的时间复杂度严格$O(N^2)$，对于插入排序，如果待排序数组有序，则时间复杂度为$O(N)$；
-    若初始数组逆序，则时间复杂度为$O(N^2)$。根据时间复杂度的定义，该算法时间复杂度为$O(N^2)$。额外空间复杂度$O(1)$。
- - get_max.py:求数组中最大值，熟悉递归操作。（调用子函数时候父函数运行环境被系统自动压栈）
-    - `master公`式（递归函数时间复杂度分析）:
-    $$T(N) = aT(\frac{n}{b})+O(n^d)$$
-        - $\text{if }logba$
-
 ### part 1
 
  - [bubble_sort.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/bubble_sort.py): 冒泡排序，$O(N^2)$，额外空间复杂度$O(1)$。
@@ -53,4 +43,3 @@
     - 大根堆：在一棵完全二叉树中，任何一棵子树中的最大值都位于头结点上；
     - 小根堆：在一棵完全二叉树中，任何一棵子树中的最小值都位于头结点上；
 长度为N的数组调整为大（小）根堆的时间复杂度为$O(N) = \log{1} + \log{2} + ... + \log{N-1}$。heap_insert的时间复杂度为$O(N)$，
->>>>>>> 93ea1d9c117781c3376e68038174c0e5a4d9912d
