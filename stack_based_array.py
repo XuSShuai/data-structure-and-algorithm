@@ -12,7 +12,7 @@ class ArrayStack:  # stack with fixed length
     def pop(self):
         if len(self.array) == 0:
             print("empty")
-            return None
+            return
         else:
             return self.array.pop()
 

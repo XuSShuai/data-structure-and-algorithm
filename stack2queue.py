@@ -1,4 +1,3 @@
-# 使用栈实现队列
 import queue
 
 

@@ -11,7 +11,6 @@ def zig_zag_print(mat):
     while first_x <= row:
         print_diagonal(mat, first_x, first_y, second_x, second_y, from_up)
         from_up = not from_up
-        # print(first_x, first_y, second_x, second_y)
         first_x = first_x + 1 if first_y == col else 0
         first_y = col if first_y == col else first_y + 1
         second_y = second_y + 1 if second_x == row else 0
