@@ -26,9 +26,7 @@ def heapify(arr, index, heap_size):
 def heap_sort(arr):
     for i in range(len(arr)):
         heap_insert(arr, i)
-
     heap_size = len(arr)
-
     for i in range(len(arr) - 1, 0, -1):
         arr[i], arr[0] = arr[0], arr[i]
         heap_size -= 1
@@ -55,3 +53,7 @@ def generate_cases():
 
 if __name__ == "__main__":
     generate_cases()
+
+    arr = [2, 4, 5, 3, 9, 8, 11, 4, 12]
+    heap_sort(arr)
+    print(arr)

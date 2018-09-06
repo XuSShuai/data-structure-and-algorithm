@@ -5,11 +5,10 @@ import operator
 def insertion_sort(arr):
     length = len(arr)
     for i in range(1, length):
-        for j in range(i - 1, -1, -1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-            else:
-                break
+        j = i - 1
+        while j >= 0 and arr[j] > arr[j + 1]:
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+            j -= 1
     return arr
 
 
