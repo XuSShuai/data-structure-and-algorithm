@@ -84,11 +84,15 @@ heapify的时间复杂度$O(\log{N})$。\
     
  - 旋转打印矩阵：[rotate_matrix.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/rotate_matrix.py)
    对矩阵旋转90度，例如：\
+   $$
+   \begin{matrix}
     [[ 0  1  2  3  4]\
      [ 5  6  7  8  9]\
      [10 11 12 13 14]\
      [15 16 17 18 19]\
      [20 21 22 23 24]]\
+   \end{matrix}
+   $$
    旋转之后的输出为：\
     [[20 15 10  5  0]\
      [21 16 11  6  1]\
