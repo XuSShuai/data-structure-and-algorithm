@@ -56,3 +56,103 @@ heapify的时间复杂度$O(\log{N})$。\
     - 快排不可以
     - 堆排序不可以
 综合排序算法：当数据量很大的时候，如果是基础数据类型，使用快排（不需要稳定性）；如果是自定义数据类型，使用归并排序（需要有稳定性）。如果数据量很小，使用插入排序。
+
+### part 3
+
+ - 使用定长数组实现栈和队列
+   - [stack_based_array.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/stack_based_array.py)
+   - [queue_based_array.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/queue_based_array.py)
+
+     在python中可以引入queue包来使用封装好的栈和队列，`queue.LifoQueue(-1)`为栈；`queue.Queue(-1)`为队列。[queue_api.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/queue_api.py)\
+     `q.qsize()` 返回大小\
+     `q.empty()` 如果为空，返回True,反之False\
+     `q.full()` 如果满了，返回True,反之False\
+     `q.get()` \
+     `q.put(item)` 
+     
+  - 仅用队列实现栈结构：[quene2stack.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/quene2stack.py)
+  - 仅用栈实现队列结构：[stack2queue.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/stack2queue.py)
+
+### part 4
+
+ - 转圈打印矩阵：[print_matrix_spiral_order.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/print_matrix_spiral_order.py), 例如对于矩阵：\
+  $$
+  \left[
+  \begin{matrix}
+    0 & 1 & 2 & 3 & 4 & 5\\\\
+    6 & 7 & 8 & 9& 10& 11\\\\
+    12& 13& 14& 15& 16& 17\\\\
+    18& 19& 20& 21& 22& 23\\\\
+  \end{matrix}
+  \right]
+  $$
+    输出打印结果为：0 1 2 3 4 5 11 17 23 22 21 20 19 18 12 6 7 8 9 10 16 15 14 13 
+    
+ - 旋转打印矩阵：[rotate_matrix.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/rotate_matrix.py)
+   对矩阵旋转90度，例如：\
+   $$
+   \left[
+   \begin{matrix}
+    0 & 1 & 2 & 3 & 4\\\\
+    5 & 6 & 7 & 8 & 9\\\\
+    10 &11 &12 &13 &14\\\\
+    15 &16 &17 &18 &19\\\\
+    20 &21 &22 &23 &24\\\\
+   \end{matrix}
+   \right]
+   $$
+   旋转之后的输出为：\
+   $$
+   \left[
+   \begin{matrix}
+    20 &15 &10 & 5 & 0\\\\
+    21 &16 &11  &6 & 1\\\\
+    22 &17 &12 & 7 & 2\\\\
+    23& 18& 13&  8&  3\\\\
+    24& 19& 14&  9&  4
+   \end{matrix}
+   \right]
+   $$
+ - 之字形打印矩阵：[zig_zag_print.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/zig_zag_print.py)\
+   对矩阵\
+   $$
+   \left[
+   \begin{matrix}
+    0 & 1 & 2 & 3 & 4 \\\\
+    5 & 6 & 7 & 8 & 9 \\\\
+    10& 11& 12& 13& 14 \\\\
+    15& 16& 17& 18& 19
+   \end{matrix}
+   \right]
+   $$
+   的打印结果为：0 1 5 10 6 2 3 7 11 15 16 12 8 4 9 13 17 18 14 19
+   
+ - 反转单向链表：[reverse_list.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/reverse_list.py)，要求时间复杂度为$O(N)$，额外空间复杂度为$O(1)$。
+ - 反转双向链表：[reverse_double_list.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/reverse_double_list.py)，要求时间复杂度为$O(N)$，额外空间复杂度为$O(1)$。
+
+ - 判断一个链表是否为回文结构：[is_palindrome_list.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/is_palindrome_list.py)
+    - 方法1：额外空间复杂度为$O(N)$，对链表进行遍历，并将元素一一入栈，第二次遍历时和栈中弹出的元素比较，如果存在不相等的，则不是回文。
+    - 方法2：额外空间复杂度$O(N/2)$，使用快慢指针，慢指针从找到的中点位置之后开始将元素入栈（一半的链表元素），入栈完成后，重新遍历链表和栈中依次弹出的元素对比，如果栈空之前发现有不等的元素，则不是回文结构。
+    - 方法3：额外空间复杂度$O(1)$，使用快慢指针，将慢指针之后的链表逆序，然后分别从第一个节点往后和最后一个节点往前逐个开始进行比对。
+
+
+ - 复制含有随机指针节点的链表
+      一种特殊的链表节点类描述如下：\
+      ```java
+      public class Node {
+        public int value;
+        public Node next;
+        public Node rand;
+        public Node(int data) {
+            this.value = data;
+        }
+      }
+      ```
+
+      Node类中的value是节点值， next指针和正常单链表中next指针的意义一样，都指向下一个节点，
+      rand指针是Node类中新增的指针， 这个指针可能指向链表中的任意一个节点， 也可能指向null。
+      给定一个由Node节点类型组成的无环单链表的头节点head， 请实现一个函数完成这个链表中所有
+      结构的复制， 并返回复制的新链表的头节点。
+      进阶：
+      不使用额外的数据结构， 只用有限几个变量， 且在时间复杂度为O(N)内完成原问题要实现的函数。
+ 
