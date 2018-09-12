@@ -1,6 +1,3 @@
-#  KMP算法
-
-
 def kmp(string1, string2):
     string1 = list(string1)
     string2 = list(string2)
@@ -47,3 +44,9 @@ if __name__ == "__main__":
     string2 = "abcd"
     print(string1.find(string2))
     print(kmp(string1, string2))
+
+
+    string1 = "周杰伦"
+    string2 = "今天是周杰伦的演唱会"
+
+    print(kmp(string2, string1))

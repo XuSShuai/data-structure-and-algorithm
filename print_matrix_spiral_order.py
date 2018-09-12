@@ -30,12 +30,11 @@ def one_spiral(mat, lx, ly, rx, ry):
             print(mat[rx][i], end=" ")
         for i in range(rx, lx, -1):
             print(mat[i][ly], end=" ")
-    print()
 
 
 mat = np.arange(3*6).reshape(3, 6)
-print(mat)
 print_matrix_spiral_matrix(mat)
+print()
 
 mat = np.arange(4*6).reshape(4, 6)
 print(mat)
