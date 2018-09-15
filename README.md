@@ -171,6 +171,7 @@ heapify的时间复杂度$O(\log{N})$。\
 ### part 5
 
  - 二叉树的遍历：[traversal_binary_tree.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/traversal_binary_tree.py)
+ 
          - 非递归前序：出栈一个元素并打印，该元素右不为空，右进栈，左不为空，左进栈
          - 非递归中序：当前元素不为空则进栈左走，为空则出栈打印右走
          - 非递归后续：利用前序改
