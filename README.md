@@ -191,3 +191,10 @@ heapify的时间复杂度$O(\log{N})$。\
  - 二叉树的序列化和反序列化：[serialize_binary_tree.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/serialize_binary_tree.py), 可以按照先序，中序，后序，层序进行序列化，使用一个队列结构进行相应的反序列化。
  
  - 判断一棵树是否是平衡二叉树：[is_balance.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/is_balance.py)
+
+ - 是否是搜索二叉树：[is_BST.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/is_BST.py)，利用中序遍历判断是否每一个节点都比上一个节点的值大即可。
+ 
+ - 是否是完全二叉树：[is_CBT.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/is_CBT.py)
+     - 按层遍历的过程中：
+         - 如果一个节点有右孩子，而没有左孩子，一定不是完全二叉树；
+         - 如果一个节点不是左右孩子双全，则从现在开始以后按照层序遍历的节点必须都是叶子节点。
