@@ -186,5 +186,6 @@ heapify的时间复杂度$O(\log{N})$。\
           self.left = None
           self.right = None
    ```
-  如果右孩子不为空，找右子树上的最左节点并返回；如果右孩子为空，向上走，直到该节点是parent节点的左孩子为止，返回parent节点。
+    如果右孩子不为空，找右子树上的最左节点并返回；如果右孩子为空，向上走，直到该节点是parent节点的左孩子为止，返回parent节点。
  
+ - 二叉树的序列化和反序列化：[serialize_binary_tree.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/serialize_binary_tree.py)
