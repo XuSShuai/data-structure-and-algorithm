@@ -190,4 +190,4 @@ heapify的时间复杂度$O(\log{N})$。\
  
  - 二叉树的序列化和反序列化：[serialize_binary_tree.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/serialize_binary_tree.py), 可以按照先序，中序，后序，层序进行序列化，使用一个队列结构进行相应的反序列化。
  
- - 
+ - 判断一棵树是否是平衡二叉树：[is_balance.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/is_balance.py)
