@@ -178,12 +178,13 @@ heapify的时间复杂度$O(\log{N})$。\
       
  - 找后继节点：[successor_node.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/successor_node.py)
  节点的类型定义为：
- ```python
- class Node:
-    def __init__(self, data):
-        self.data = data
-        self.parent = None
-        self.left = None
-        self.right = None
- ```
+   ```python
+   class Node:
+      def __init__(self, data):
+          self.data = data
+          self.parent = None
+          self.left = None
+          self.right = None
+   ```
+  如果右孩子不为空，找右子树上的最左节点并返回；如果右孩子为空，向上走，直到该节点是parent节点的左孩子为止，返回parent节点。
  
