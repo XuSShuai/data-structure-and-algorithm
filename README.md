@@ -166,3 +166,11 @@ heapify的时间复杂度$O(\log{N})$。\
                - 方法二：统计单链表1的长度L1和最后一个节点end1，单链表2的长度L2和最后一个节点end2。如果end1!=end2，不相交；如果end1==end2，相交，从头结点开始，较长的单链表先走两个链表相差的步数，然后开始一起走，第一个相同的节点为入环的第一个节点。
           - 如果一个有环，一个无环：不可能相交。
           - 两个环分三种情况。
+        
+ 
+### part 5
+
+ - 二叉树的遍历：[traversal_binary_tree.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/traversal_binary_tree.py)
+         - 非递归前序：出栈一个元素并打印，该元素右不为空，右进栈，左不为空，左进栈
+         - 非递归中序：当前元素不为空则进栈左走，为空则出栈打印右走
+         - 非递归后续：利用前序改
