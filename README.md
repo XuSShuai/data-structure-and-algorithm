@@ -175,3 +175,15 @@ heapify的时间复杂度$O(\log{N})$。\
       - 非递归前序：出栈一个元素并打印，该元素右不为空，右进栈，左不为空，左进栈
       - 非递归中序：当前元素不为空则进栈左走，为空则出栈打印右走
       - 非递归后续：利用前序改
+      
+ - 找后继节点：[successor_node.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/successor_node.py)
+ 节点的类型定义为：
+ ```python
+ class Node:
+    def __init__(self, data):
+        self.data = data
+        self.parent = None
+        self.left = None
+        self.right = None
+ ```
+ 
