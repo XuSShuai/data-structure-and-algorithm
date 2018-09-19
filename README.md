@@ -277,3 +277,5 @@ heapify的时间复杂度$O(\log{N})$。\
    \right]
    $$
    答案为3.
+   
+- 前缀树：(trie_tree.py)[https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/trie_tree.py]， 将节点的值利用边表示。
