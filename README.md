@@ -288,12 +288,13 @@ heapify的时间复杂度$O(\log{N})$。\
 
 - [maximum_profits.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/maximum_profits.py)：\
     输入：\
-      参数1,正数数组costs，costs[i]表示i号项目的花费\
-      参数2,正数数组profits，profits[i]表示i号项目的利润\
-      参数3,正数k，表示你不能并行,只能串行的最多做k个项目\
-      参数4,正数m，m表示你初始的资金\
-      说明: 你每做完一个项目,马上获得的收益,可以支持你去做下一个项目\
-    输出: \你最后获得的最大钱数。
+      参数1，正数数组costs，costs[i]表示i号项目的花费\
+      参数2，正数数组profits，profits[i]表示i号项目的利润\
+      参数3，正数k，表示你不能并行,只能串行的最多做k个项目\
+      参数4，正数m，m表示你初始的资金\
+      说明：你每做完一个项目,马上获得的收益,可以支持你去做下一个项目\
+    输出：\
+      你最后获得的最大钱数。
      
       
       
