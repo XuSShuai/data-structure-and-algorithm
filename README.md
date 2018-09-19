@@ -228,16 +228,21 @@ heapify的时间复杂度$O(\log{N})$。\
        - 解决方案：**布隆过滤器**的作用是实现查找某一个key是否在set中。但是存在失误率：不在set中的key可能会误报为存在于set中，但是存在set中的key一定能够被检测出来。
        
        - 如何定义一个容量为320的`bit array`，一个`int`有四个字节，一个字节有8个`bit`，所以一个大小为10的`int`数组，可以定义一个容量为320的`bit`数组。
-        ```python
-        bit_arr = [0] * 10
-        ```
+       ```python
+       bit_arr = [0] * 10
+       ```
        - 如何将第`index`个`bit`位设置为1，假设`index=300`
-        ```python
-        index = 300
-        int_index = index // 32
-        bit_index = index % 32
-        arr[int_index] = (arr[int_index] | 1 << bit_index)
-        ```
+       ```python
+       index = 300
+       int_index = index // 32
+       bit_index = index % 32
+       arr[int_index] = (arr[int_index] | 1 << bit_index)
+       ```
        - 具体过程：定义一个大小为 M 的 bit array， 对于黑名单中的任意一个url，分别利用事先准备好的K个哈希函数计算其哈希值然后对 M 取模，在bit array数组中将得到的K个结果对应的位设置为1。在判定时，如果一个url经过K个hash函数求值并且取模之后的所有位都是1，则该布隆过滤器认为该url属于黑名单；如果不是K个结果对应的值都为1，则该url必定不属于黑名单。
-       $$M = -frac{N * \ln{p}}{ln{2}^2}$$
+       - 如果确定bit array的大小
+       $$M = -\frac{N * \ln{p}}{ln{2}^2}$$
        其中M是bit array的容量，N为样本的数量，p为容错率。
+       - 如何确定hash函数的个数K
+       $$K = \ln{2} * \frac{m}{n}$$
+       - 对K，和bit array的大小向上取整，真实的错误率为：
+       $$p = (1 - e^{-\frac{n*k}{m}})^K$$
