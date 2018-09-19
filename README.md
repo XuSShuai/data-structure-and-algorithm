@@ -264,7 +264,7 @@ heapify的时间复杂度$O(\log{N})$。\
       - 优化：在findhead的过程中，将链上的所有节点链接到归属节点上。
       - 复杂度：数据量为`N`，当查询和合并的操作的数量级达到`N`时，单次查询和合并的复杂度$O(1)$
  
-- 岛问题(islands.py)[https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/islands.py]：一个矩阵中只有0和1两种值， 每个位置都可以和自己的上、 下、 左、 右四个位置相连， 如果有一片1连在一起， 这个部分叫做一个岛， 求一个矩阵中有多少个岛？
+- 岛问题[islands.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/islands.py)：一个矩阵中只有0和1两种值， 每个位置都可以和自己的上、 下、 左、 右四个位置相连， 如果有一片1连在一起， 这个部分叫做一个岛， 求一个矩阵中有多少个岛？
 举例：
    $$
    \left[
@@ -278,4 +278,6 @@ heapify的时间复杂度$O(\log{N})$。\
    $$
    答案为3.
    
-- 前缀树：(trie_tree.py)[https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/trie_tree.py]， 将节点的值利用边表示。
+- 前缀树：[trie_tree.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/trie_tree.py)， 将节点的值利用边表示。
+
+- [lowest_dictionary_order.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/lowest_dictionary_order.py)：给定一个字符串类型的数组strs， 找到一种拼接方式， 使得把所有字符串拼起来之后形成的字符串具有最低的字典序。
