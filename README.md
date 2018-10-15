@@ -136,8 +136,8 @@ heapify的时间复杂度$O(\log{N})$。\
     - 方法3：额外空间复杂度$O(1)$，使用快慢指针，将慢指针之后的链表逆序，然后分别从第一个节点往后和最后一个节点往前逐个开始进行比对。
 
 
- - 复制含有随机指针节点的链表
-      一种特殊的链表节点类描述如下：\
+ - [copy_link_with_two_point.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/copy_link_with_two_point.py)复制含有随机指针节点的链表
+      一种特殊的链表节点类描述如下：
       ```java
       public class Node {
         public int value;
@@ -155,4 +155,149 @@ heapify的时间复杂度$O(\log{N})$。\
       结构的复制， 并返回复制的新链表的头节点。
       进阶：
       不使用额外的数据结构， 只用有限几个变量， 且在时间复杂度为O(N)内完成原问题要实现的函数。
+      
+ - [intersect_node.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/intersect_node.py)**两个单链表相交的一系列问题**：在本题中,单链表可能有环,也可能无环.给定两个单链表的头节点head1和head2,这两个链表可能相交,也可能不相交. 请实现一个函数,如果两个链表相交,请返回相交的第一个节点;如果不相交,返回null即可.要求:如果链表1的长度为N， 链表2的长度为M，时间复杂度请达到 O(N+M)， 额外空间复杂度请达到O(1)。
+      - 第一个问题：如何判断一个单链表是否有环。
+          - 方法一：使用一个hashmap（在python中可以使用一个set或者是dict结构），从头节点开始遍历并将节点放入到哈希表中，在放入的过程中如果发现哈希表中已经存在该节点，则说明有环，并且该节点是第一个入环的节点；如果遍历到空，则说明无环。
+          - 方法二：使用一个快指针，如果快指针在遍历的过程中发现空，则无环；否则在快指针和慢指针相遇的时候，快指针回到头结点，快指针和慢指针都一次走一步，相遇的节点是第一个入环的节点。
+      - 第二个问题：当已经知道两个单链表各自是否有环的情况下，如何判断第一个相交的节点：
+          - 如果两个单链表都没有环：
+               - 方法一：哈希表：将单链表1中的所有节点放入哈希表中，遍历单链表2的每一个节点，第一个存在于哈希表中的属于单链表二的节点为相交的节点；如果不存在这样的节点，则不相交。
+               - 方法二：统计单链表1的长度L1和最后一个节点end1，单链表2的长度L2和最后一个节点end2。如果end1!=end2，不相交；如果end1==end2，相交，从头结点开始，较长的单链表先走两个链表相差的步数，然后开始一起走，第一个相同的节点为入环的第一个节点。
+          - 如果一个有环，一个无环：不可能相交。
+          - 两个环分三种情况。
+        
  
+### part 5
+
+ - 二叉树的遍历：[traversal_binary_tree.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/traversal_binary_tree.py)
+ 
+      - 非递归前序：出栈一个元素并打印，该元素右不为空，右进栈，左不为空，左进栈
+      - 非递归中序：当前元素不为空则进栈左走，为空则出栈打印右走
+      - 非递归后续：利用前序改
+      - 层序遍历：使用队列
+      
+ - 找后继节点：[successor_node.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/successor_node.py)
+ 节点的类型定义为：
+   ```python
+   class Node:
+      def __init__(self, data):
+          self.data = data
+          self.parent = None
+          self.left = None
+          self.right = None
+   ```
+    如果右孩子不为空，找右子树上的最左节点并返回；如果右孩子为空，向上走，直到该节点是parent节点的左孩子为止，返回parent节点。
+ 
+ - 二叉树的序列化和反序列化：[serialize_binary_tree.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/serialize_binary_tree.py), 可以按照先序，中序，后序，层序进行序列化，使用一个队列结构进行相应的反序列化。
+ 
+ - 判断一棵树是否是平衡二叉树：[is_balance.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/is_balance.py)
+
+ - 是否是搜索二叉树：[is_BST.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/is_BST.py)，利用中序遍历判断是否每一个节点都比上一个节点的值大即可。
+ 
+ - 是否是完全二叉树：[is_CBT.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/is_CBT.py)
+     - 按层遍历的过程中：
+         - 如果一个节点有右孩子，而没有左孩子，一定不是完全二叉树；
+         - 如果一个节点不是左右孩子双全，则从现在开始以后按照层序遍历的节点必须都是叶子节点。
+         
+ - [complete_tree_node_number.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/complete_tree_node_number.py)：已知一棵完全二叉树，求其节点的个数，要求时间复杂度低于$O(N)$，N为节点的个数(所以不能使用遍历的方式)。
+ 
+      - 公式：一棵满二叉树的节点的个数为$2^L - 1$，其中$L$为树的高度。思路：遍历根的左边界，可以得到树的总层数；遍历根的右子树的左边界；
+    
+         - 根的右子树的左边界达到了树的总层数，则根的左子树为满二叉树，利用公式求，然后递归求解根的右子树（此时为完全二叉树）
+         - 根的右子树的左边界没有达到了树的总层数，则根的右子树为满二叉树，利用公式求，然后递归求解根的左子树（此时为完全二叉树）
+    
+    该算法的时间复杂度$O((log N)^2)$
+     
+### part 6
+
+  - 哈希函数：
+       - 输入域是无穷大的
+       - 输出域是有穷的
+       - same input, same output
+       - 因为性质1性质2，所以不同的输入可能有相同的输出
+       - 输出域上的值均匀分布
+  - 哈希表
+       - 数组加链表实现，初始化时给一个定长为 N 的数组 H，`put(key, value)`时，计算`index=hash(key)%N`，将该记录挂在数组中`H[index]`的链表上（java中是一棵红黑树）。根据`hash`函数的性质，每一个数据元素上挂载的链表的长度应该是几乎相等的，当该长度大于阈值时候，进行hash表的扩容。\
+  实例：一个大小为100T的文件，每行一个字符串文本，如何统计重复的字符串文本。(利用哈希函数相同输入相同输出，不同输出均匀分布的特点)\
+  假设有 N 台机器可用，利用hash函数计算每一行文本的hashcode，然后模 N， 这样文本被几乎均分至 N 台机器，且能保证相同的文本必定存在于同一台机器上。
+
+  - 布隆过滤器：
+       - 应用场景：现有一个100亿个url组成的黑名单，如何判断任意给定的一个url是否属于该给黑名单。
+       - 问题分析：假设每一个usr为64个字节，如果使用hashset，则需要的内存大小为6400亿个字节，大约为640G。
+       - 解决方案：**布隆过滤器**的作用是实现查找某一个key是否在set中。但是存在失误率：不在set中的key可能会误报为存在于set中，但是存在set中的key一定能够被检测出来。
+       
+       - 如何定义一个容量为320的`bit array`，一个`int`有四个字节，一个字节有8个`bit`，所以一个大小为10的`int`数组，可以定义一个容量为320的`bit`数组。
+       ```python
+       bit_arr = [0] * 10
+       ```
+       - 如何将第`index`个`bit`位设置为1，假设`index=300`
+       ```python
+       index = 300
+       int_index = index // 32
+       bit_index = index % 32
+       arr[int_index] = (arr[int_index] | 1 << bit_index)
+       ```
+       - 具体过程：定义一个大小为`M`的`bit array`， 对于黑名单中的任意一个`url`，分别利用事先准备好的`K`个哈希函数计算其哈希值然后对`M`取模，在`bit array`数组中将得到的K个结果对应的位设置为`1`。在判定时，如果一个`url`经过`K`个`hash`函数求值并且取模之后的所有位都是`1`，则该布隆过滤器认为该`url`属于黑名单；如果不是`K`个结果对应的值都为`1`，则该`url`必定不属于黑名单。
+       - 如果确定`bit array`的大小`M`,单位为`bit`
+       $$M = -\frac{N * \ln{p}}{(ln{2})^2}$$
+       其中`N`为样本的数量，`p`为容错率。
+       - 如何确定`hash`函数的个数`K`
+       $$K = \ln{2} * \frac{M}{N}$$
+       - 对`K`，和`bit array`的大小向上取整，真实的错误率为：
+       $$p = (1 - e^{-\frac{N*k}{M}})^K$$
+       
+  - 一致性哈希
+  经典服务器的抗压结构，对于某一项服务，例如根据给定的`key`查询`value`，利用哈希函数的性质可以将所有的记录均衡分布在`N`台机器上`（$hash(key)%N$）`，达到负载均衡。当更改`N`的大小为`M`时候，所有记录的归属机器将发生改变，数据迁移代价极大。而利用一致性哈希结构可以将数据迁移的代价降低。一致性哈希可以将数据迁移的代价降低同时做到负载均衡。将哈希函数的输出连接成一个环，将`N`台机器映射到环上，此后每一个`key`保存在其`hash`值顺时针找到的第一台机器上，通过这样的方式，在增加机器或者移除机器时，只需要改变极少数数据存储的机器即可。但是这样的方式无法保证负载均衡，利用虚拟节点技术可以做到这一点，让一台物理机拥有多个虚拟节点，将这些虚拟节点映射到环上，虚拟节点抢到的数据全部交给物理机处理，这样就可以保证负载均衡。一致性哈希技术。
+
+
+### part 7
+
+  - 并查集[union_find_set.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/union_find_set.py)：所有数据预先给定。
+      - 功能：
+          - 判断两个节点是否属于同一个集合
+          - 将两个节点各自的集合合并
+      - 实现：
+          - 利用hashmap实现（python中使用dict即可）
+          - `issameset`:是否有相同的归属节点
+          - `union`:节点个数少的链接到节点个数多的
+      - 优化：在findhead的过程中，将链上的所有节点链接到归属节点上。
+      - 复杂度：数据量为`N`，当查询和合并的操作的数量级达到`N`时，单次查询和合并的复杂度$O(1)$
+ 
+- 岛问题[islands.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/islands.py)：一个矩阵中只有0和1两种值， 每个位置都可以和自己的上、 下、 左、 右四个位置相连， 如果有一片1连在一起， 这个部分叫做一个岛， 求一个矩阵中有多少个岛？
+举例：
+   $$
+   \left[
+   \begin{matrix}
+    0 & 0 & 1 & 0 & 1 & 0 \\\\
+    1 & 1 & 1 & 0 & 1 & 0 \\\\
+    1& 0& 0& 1& 0 & 0 \\\\
+    0& 0& 0& 0& 0 & 0 \\\\
+   \end{matrix}
+   \right]
+   $$
+   答案为3.
+   
+- 前缀树：[trie_tree.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/trie_tree.py)， 将节点的值利用边表示。
+
+### part 8
+
+- [lowest_dictionary_order.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/lowest_dictionary_order.py)：给定一个字符串类型的数组strs， 找到一种拼接方式， 使得把所有字符串拼起来之后形成的字符串具有最低的字典序。
+
+- [less_money.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/less_money.py)：一块金条切成两半,是需要花费和长度数值一样的铜板的.比如长度为20的金条,不管切成长度多大的两半,都要花费20个铜板.一群人想整分整块金条,怎么分最省铜板?例如,给定数组{10,20,30},代表一共三个人,整块金条长度为10+20+30=60.金条要分成10,20,30三个部分.如果,先把长度60的金条分成10和50,花费60;再把长度50的金条分成20和30,花费50;一共花费110铜板.但是如果,先把长度60的金条分成30和30,花费60;再把长度30金条分成10和20,花费30;一共花费90铜板.输入一个数组,返回分割的最小代价.
+
+- [maximum_profits.py](https://github.com/XuSShuai/data-structure-and-algorithm/blob/master/maximum_profits.py)：\
+    输入：\
+      参数1，正数数组costs，costs[i]表示i号项目的花费\
+      参数2，正数数组profits，profits[i]表示i号项目的利润\
+      参数3，正数k，表示你不能并行,只能串行的最多做k个项目\
+      参数4，正数m，m表示你初始的资金\
+      说明：你每做完一个项目,马上获得的收益,可以支持你去做下一个项目\
+    输出：\
+      你最后获得的最大钱数。
+     
+      
+      
+      
+      
+    

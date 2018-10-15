@@ -1,7 +1,3 @@
-# 已知一棵完全二叉树， 求其节点的个数
-# 要求： 时间复杂度低于O(N)， N为这棵树的节点个数
-
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -24,6 +20,9 @@ def complete_tree_node_number(head, level, tree_height):
 
 
 def get_most_left_level(head, level):
+    """
+    返回位于level层的节点head的最左侧子节点的层数
+    """
     while head:
         head = head.left
         level += 1
